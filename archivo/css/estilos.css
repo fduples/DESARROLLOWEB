@@ -1,0 +1,23 @@
+* { /** se utiliza el asterizco para señalara a todos los elementos. */
+    box-sizing: border-box; /** se aplica el border-box para que el responsive sea mas certero */
+}
+
+h1 + p {
+    font-family: 'Rubik Bubbles', cursive;
+    color: red;
+}
+
+p {
+    width: 95%;
+    padding: 2%;
+}
+
+h1 {
+    color: grey;
+    font-weight: bold;
+}
+
+ /* Hola */
+ /** 
+ Hola
+ */   
