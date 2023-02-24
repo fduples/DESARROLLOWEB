@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV-ArgProg4_F.Duples</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech|Share+Tech+Mono" rel="stylesheet">
+    <!-- Incorporo el framework css de W3: W3.css y lo utilizo en algunos botones y en la barra de navegación-->
+    <script src="https://kit.fontawesome.com/1803faaf6e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="w3-bar w3-card-4 w3-light-black">
+        <ul>
+            <li><a href="#" id="inicio">Inicio</a></li>
+            <li><a class="active" href="#info" onclick="gatillo('info')">Mi Información</a></li>
+            <li><a href="#habilidad" onclick="gatillo('habilidad')">Habilidades</a></li>
+            <li><a href="#hobbie" onclick="gatillo('hobbie')">Hobbies</a></li>
+            <li><a href="#trabajo" onclick="gatillo('trabajo')">Trabajo</a></li>
+            <li><a href="#redes" onclick="gatillo('redes')">Redes</a></li>
+            <li><a href="#contacto" onclick="gatillo('contacto')">Contacto</a></li>
+        </ul>
+    </nav>
+    <div>
+        <img src="imagenes/foto_usu.jpg" alt="Foto de Jennie Nichols" class="foto">
+    </div>
+    <main>
+        <h2 id="info">
+            <div class="hexagono movido" id="hexaInfo"></div><span class="w3-button w3-hover-black">Mi información</span>
+        </h2>
+        <div class="detalle principal" id="divInfo">
+            <p>Mi nombre es Jennie Nichols. Tengo 30 años y soy estudiante de Ingenieria.</p>
+            <p>Quise ser ingeniera toda mi vida y ahora estoy cumpliendo ese sueño.</p>
+        </div>
+        <h2 id="habilidad">
+            <div class="hexagono" id="hexaHabil"></div><span class="w3-button w3-hover-teal">Habilidades</span>
+        </h2>
+        <div class="detalle oculta" id="divHabil">
+            <p>Una buena comprensión de la programación orientada a objetos y las matemáticas relacionadas con la
+                informática en general. Competente en CSS3 y HTML5. Haciendo avances significativos en JavaScript y
+                JQuery.</p>
+            <p>Además de mi conocimiento en programación, también hablo cinco idiomas y estoy en el proceso de aprender
+                uno más.</p>
+        </div>
+        <h2 id="hobbie">
+            <div class="hexagono" id="hexaHobbie"></div><span class="w3-button w3-hover-red">Hobbies e Inquietudes</span>
+        </h2>
+        <div class="detalle oculta" id="divHobbie">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rutrum justo ac tortor convallis, quis
+                interdum urna vulputate. Suspendisse venenatis auctor finibus. Nam vel lacus fermentum risus auctor
+                rhoncus et in ligula. Donec sed arcu tristique, pharetra arcu et, malesuada orci. Nunc malesuada eros
+                diam, sed commodo est pellentesque sit amet. In tincidunt orci id libero tristique fringilla.
+                Pellentesque neque arcu, eleifend vel dui id, tempus vehicula turpis. Phasellus pellentesque dignissim
+                nulla eget semper. Duis vel commodo risus. In pretium lacinia sagittis. Pellentesque imperdiet dignissim
+                elit eu faucibus. Nullam ultricies, dolor a tincidunt auctor, est odio accumsan diam, auctor porta eros
+                magna vitae eros.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at accumsan massa. Nam at augue lobortis,
+                finibus orci eget, tempor odio. Etiam venenatis urna a magna tincidunt eleifend. Phasellus odio mauris,
+                aliquet a massa vel, volutpat commodo arcu. Nam aliquam elit consequat lacus feugiat blandit. Donec sed
+                ullamcorper diam, sit amet ultricies quam. In quis dapibus tortor. Nam faucibus nunc vel rhoncus
+                faucibus.</p>
+        </div>
+        <h2 id="trabajo">
+            <div class="hexagono" id="hexaTrabajo"></div><span  class="w3-button w3-hover-purple">Trabajo Actual</span>
+        </h2>
+        <div class="detalle oculta" id="divTrabajo">
+            <p>Nulla sodales lorem felis, a varius ante porta sed. Phasellus ac nulla nec mi pulvinar lacinia eu eu
+                libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis
+                consectetur fringilla tempus. Suspendisse potenti. Maecenas viverra, purus a sodales viverra, quam augue
+                ultricies risus, eget vestibulum arcu massa ut felis. Vestibulum aliquam mi in nibh luctus, sit amet
+                pellentesque diam tincidunt. Nunc a dapibus libero.</p>
+        </div>
+        <h2 id="redes">
+            <div class="hexagono" id="hexaRedes"></div><span  class="w3-button w3-hover-aqua">En las redes</span>
+        </h2>
+        <div class="detalle oculta" id="divRedes">
+            <ul>
+                <li><a href="#"><img src="ico/twitter.svg" alt="twiter" class="iconos"></a></li>
+                <li><a href="https://www.facebook.com"><img src="ico/facebook.svg" alt="facebook" class="iconos"></a></li>
+                <li><a href="#"><img src="ico/instagram.svg" alt="instagram" class="iconos"></a></a></li>
+                <li><a href="#"><img src="ico/linkedin.svg" alt="linkedin" class="iconos"></a></a></li>
+            </ul>
+        </div>
+        <h2 id="contacto">
+            <div class="hexagono" id="hexaContacto"></div><span  class="w3-button w3-hover-blue">Datos de contacto</span>
+        </h2>
+        <div class="detalle oculta" id="divContacto">
+            <ul>
+                <li>Telefono: (272) 790-0888</li>
+                <li>Movil: (489) 330-2385</li>
+                <li>E-mail: <a>jennie.nichols@example.com</a></li>
+                <li>Discord: <a>jnichols#0371</a></li>
+            </ul>
+        </div>
+    </main>
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="wave" id="one">
+        <path d="M-13.36,88.98 C168.85,182.73 276.72,-73.84 506.31,79.10 L500.00,150.00 L0.00,150.00 Z"></path>
+        </svg>
+
+    <script src="js/acciones.js"></script>
+
+</body>
+
+
+</html>

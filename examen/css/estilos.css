@@ -1,0 +1,310 @@
+/**********************/
+/* 0 @imports */
+/**********************/
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* Estilo para dispositivos grandes: Laptops y computadoras de escritorio*/
+
+    /* El orden de los estilos va a ser de la manera indicada a continuación:
+1: Etiquetas puras
+2: Clases
+3: Id
+Asimiso dentro de cada tipo se ordenan alfabeticamente
+*El mismo orden se usaran para el responsive*
+*/
+
+
+    /**********************/
+    /* 1 Etiquetas PURAS */
+    /**********************/
+
+
+    /* establezco las características del body con el que quiero trabajar: Padding,margenes,fuente, background, etc.*/
+    body {
+        padding: 0.5%;
+        margin: 0;
+        font-family: 'Dancing Script', cursive, sans-serif !important;
+        font-size: 16px;
+        color: #505050;
+        background: rgba(255, 255, 255, 0.973);
+        overflow-x: hidden;
+        background-image: url("/imagenes/encabezado.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /* En esta seccion establecemos los estilos para los títulos que van a funcionar tambien como botones
+de muestra y ocultamiento de los campos de cada título - Para este caso dejo establecido los estilos pero tambien le asigno,
+utilizando el framework css de W3: W3.css le asigno valor de botón con un hober negro*/
+    h2 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-family: 'Share Tech Mono', monospace !important;
+        font-size: 2.2em;
+        line-height: 1em;
+        word-spacing: -.1em;
+        letter-spacing: -.05em;
+        transition: .2s all ease;
+        margin-left: 10px;
+        margin-bottom: 15px;
+        cursor: pointer
+    }
+
+    h2 span {
+        background: rgba(238, 238, 238, .7);
+        padding: 5px 7px;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    h2:active {
+        color: #51b5ac;
+    }
+
+    /* Para la caja principal de nuestro proyecto, establezo un position:relative, padding y un margen negativo.
+asimismo le establecemos una opcidad de 1 (que se vea completamente) y un margen superior de 0*/
+
+    main {
+        position: relative;
+        padding: 3%;
+        opacity: 1;
+        margin-top: 0px;
+    }
+
+    /* La seccion en la que damos estilo al navbar de la página. Lo mas importante son las fuentes en el nav ul
+el índice que lo pones por sobre el resto de las cajas y finalmente el 
+position.fixed que hace que acompañe el scroll del ususario */
+
+    nav {
+        z-index: 100;
+        width: 97.5%;
+        margin: 0% 0.3% 0.3% 1%;
+        padding: 0.3px;
+        position: fixed;
+        background-color: #333;
+    }
+
+    /* en esta parte le quito los estilos a la lista desordena como factor mas importante del estilo */
+    nav ul {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    /* Agrupo con cloat:left, todas las li hacia la izquierda. */
+    nav li {
+        float: left;
+    }
+
+    /* Quito la decoración de los links, establezco display block y mas abajo hago que en el hover se ponga negro */
+    nav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    nav li a:hover {
+        background-color: #111;
+    }
+
+    /* Para los párrafos solo le doy margen y como factor mas importante le asino al primer p hijo el margen 
+superior cero y al ultimo el inferior */
+    p {
+        margin: 1em;
+        font-size: 24px;
+    }
+
+    p:first-child {
+        margin-top: 0
+    }
+
+    p:last-child {
+        margin-bottom: 0
+    }
+
+
+    /*************/
+    /* 2. Clases */
+    /*************/
+
+    /* la calse .detalle es la mas importante porque es la que contiene la información de cada apartado.
+Con esta establezco para el general de los apartados como va a ser la forma del contener, el establezo una posicion relativa
+un margen redondeado con borde solido de 1 pixel, un interlineado de 1.5 y margen inferior de 20px.*/
+
+    .detalle {
+        position: relative;
+        border-radius: 10px;
+        background: #eee;
+        border: 1px solid;
+        padding: 13px;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    /* con este estilo le digo que todos los .detalle que no tengan tambien la clase .principal no se despleguen */
+    .detalle:not(.principal) {
+        display: none !important;
+    }
+
+    /*Con este :befor creo una linea que va desde el hexagono hasta la caja detalle como señalandolo */
+    .detalle:before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        background: #bbb;
+        left: 0.54em;
+        height: 1em;
+        top: calc(-1.2em - 1px);
+    }
+
+    .detalle.oculta:before {
+        left: 1em;
+        height: 1.2em;
+        top: calc(-1.2em - 1px);
+    }
+
+    /* La clase hexagono le da estilo a los marcadores de titulo de cada sección. 
+Lo mas importante es que para "dibujar el hexagono hago solido el borde pero solo el superior y el inferior
+establezco el mismo estilo para before y after y asi consigo el hexagono.
+Luego con un :hover hago que rote 30 grados para que quede con la punta hacia abajo y se una con el :before del detalle.
+*/
+
+    .hexagono,
+    .hexagono:before,
+    .hexagono:after {
+        height: 1em;
+        width: .59em;
+        border: solid;
+        border-width: 1px 0;
+        border-radius: 2px;
+        box-sizing: border-box;
+        position: relative;
+        display: inline-block;
+        margin-right: .5em;
+        transition: .4s all ease;
+    }
+
+
+    .hexagono:hover {
+        transform: rotate(30deg);
+    }
+
+    /* aca le doy estilo a la foto.*/
+    .foto {
+        width: 300px;
+        margin: 10% 0 20px 10%;
+        padding: 0%;
+        box-sizing: content-box;
+        border-radius: 20px;
+    }
+
+    .hexagono:before,
+    .hexagono:after {
+        content: '';
+        position: absolute;
+        margin-top: -1px;
+        margin-left: 0;
+        /*     color:#ccc; */
+    }
+
+    .hexagono:before {
+        transform: rotate(60deg);
+    }
+
+    .hexagono:after {
+        transform: rotate(-60deg);
+    }
+
+    .hexagono,
+    .hexagono:before,
+    .hexagono:after,
+    .detalle {
+        border-color: #bbb;
+    }
+
+    .hexagono.movido {
+        transform: rotate(30deg);
+    }
+
+    .iconos {
+        box-sizing: border-box;
+        width: 2em;
+    }
+
+
+    .wave {
+        width: 100vw;
+        height: 150px;
+        /*position:fixed;*/
+        bottom: 0;
+        fill: #1b747763;
+        z-index: -1;
+    }
+
+
+    /**********************/
+    /* 3. Id individuales */
+    /**********************/
+    #divRedes,
+    #divContacto {
+        display: inline-block;
+        width: auto;
+        box-sizing: content-box;
+        font-weight: bolder;
+    }
+
+    #divRedes ul {
+        list-style: none;
+        margin: 1em;
+    }
+
+    #divRedes ul li {
+        display: inline;
+        margin: 1.5em;
+        box-sizing: content-box;
+    }
+
+    #divRedes ul li a {
+        padding: 1px;
+    }
+
+    #inicio {
+        background-color: #111;
+    }
+
+    #inicio:hover {
+        background-color: #333;
+    }
+
+
+
+@media only screen and (max-width: 660px) {
+
+    nav {
+        border: 0px;
+        display: none !important;
+    }
+
+    nav ul {
+        display: none;
+    }
+}
+/*
+@media all and (min-width:670px) {
+    main {
+        width: auto;
+        margin-left: 10%;
+        margin: 0 15px;
+    }
+}
+
+
+@media all and (max-width:670px) {
+    main {  }
+} */
